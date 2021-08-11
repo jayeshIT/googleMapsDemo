@@ -1,0 +1,18 @@
+<!-- <google-map
+  height="500px"
+  width="100%"
+  [zoom]="zoom"
+  [center]="center"
+  [options]="options"
+></google-map> -->
+<!-- 
+<google-map  height="500px" width="80%"></google-map> -->
+
+<!-- <div id="map"></div> -->
+
+<button title="Single Route" (click)="SingleRoute()">Single Route</button>
+
+<button title="Multiple Route" (click)="Multiple()">Multiple Route</button>
+
+<app-single-route *ngIf="loadSingleroute"></app-single-route>
+<app-multiple-routes *ngIf="loadMultiple"></app-multiple-routes>
