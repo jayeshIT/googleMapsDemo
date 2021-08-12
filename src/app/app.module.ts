@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 
 import { GoogleMapsModule } from '@angular/google-maps';
 import { SingleRouteComponent } from './single-route/single-route.component';
-import { MultipleRoutesComponent } from './multiple-routes/multiple-routes.component'
+import { MultipleRoutesComponent } from './multiple-routes/multiple-routes.component';
+import { MultipleRouteMarkersComponent } from './multiple-route-markers/multiple-route-markers.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SingleRouteComponent,
-    MultipleRoutesComponent
+    MultipleRoutesComponent,
+    MultipleRouteMarkersComponent
   ],
   imports: [
     BrowserModule,

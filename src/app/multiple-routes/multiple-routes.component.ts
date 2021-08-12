@@ -17,7 +17,9 @@ export class MultipleRoutesComponent implements OnInit {
       // I am cab driver I pickup 5 persons
     //My First and Last are source to desstination and rest 3 are my waypoints.
 
-    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const directionsRenderer = new google.maps.DirectionsRenderer({
+        suppressMarkers : false
+    });
     const directionsService = new google.maps.DirectionsService();
 
     var setMap = new google.maps.LatLng(19.1383, 77.3210);
@@ -127,6 +129,7 @@ export class MultipleRoutesComponent implements OnInit {
             if (status === "OK") {
                 directionsRenderer.setDirections(response);
                 directionsRenderer.setMap(map);
+                
             } else {
                 debugger;
                 window.alert("Directions request failed due to " + status);

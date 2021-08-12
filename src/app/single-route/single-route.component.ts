@@ -20,6 +20,7 @@ export class SingleRouteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
     const directionsRenderer = new google.maps.DirectionsRenderer();
     const directionsService = new google.maps.DirectionsService();
 
@@ -46,7 +47,6 @@ export class SingleRouteComponent implements OnInit {
       travelMode: google.maps.TravelMode.DRIVING,
 
     },function(response,status) {
-     
       console.log(status);
       if (status == google.maps.DirectionsStatus.OK) {
         directionsRenderer.setDirections(response);
